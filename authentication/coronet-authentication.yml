@@ -1,0 +1,36 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.coro.net/developer-portal/authentication
+docs: https://docs.coro.net/developer-portal/authentication
+summary:
+  types: [oauth2]
+  oauth2_flows: [clientCredentials]
+  token_type: bearer
+  token_lifetime: 24h
+  request_headers: [Authentication, Workspace]
+schemes:
+- name: OAuth2ClientCredentials
+  type: oauth2
+  description: >-
+    To use the Coro API you must first authenticate and obtain a session
+    (bearer) token. Generate a Client ID and Secret credential pair in the Coro
+    console under Control Panel > Connectors > API Credentials (these are not
+    the same as console username/password). POST the credentials to the client
+    authentication endpoint (/oath/token) to receive a bearer token valid for
+    24 hours.
+  flow: clientCredentials
+  token_endpoint: /oath/token
+  token_lifetime: 24h
+  credential_source: Coro console > Control Panel > Connectors > API Credentials
+  usage:
+    authorization_header: Authentication
+    additional_headers:
+    - name: Workspace
+      description: The Workspace ID against which the request is executed.
+  sources: [docs.coro.net/developer-portal/authentication]
+notes:
+- Every request sets an Authentication header carrying the bearer token and a
+  Workspace header carrying the target Workspace ID.
+- Token is valid for 24 hours; re-request from /oath/token to refresh.
+- No OpenAPI securityScheme document was retrievable (api.secure.coro.net
+  requires auth); this profile is captured from the published auth docs.
