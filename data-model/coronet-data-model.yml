@@ -1,0 +1,68 @@
+generated: '2026-07-18'
+method: derived
+source: https://docs.coro.net/developer-portal/
+note: >-
+  Derived from Coro's published developer docs (changelog schemas + webhook
+  payloads). No full OpenAPI was retrievable (api host requires auth), so
+  relationships are inferred from documented fields and endpoints, not a spec.
+entities:
+- name: Workspace
+  description: 'A tenant/virtual environment. Types: regular, channel, child.'
+  key_fields: [companyName, displayName, domain, type, maxProtectedUsers, maxDevicesLimit, parentWorkspaceId, workspaceCreationType, limited]
+  endpoints: [GET /v1/workspaces, POST /v1/workspaces, GET /v1/workspaces/search]
+- name: Subscription
+  description: A workspace's Coro module subscription (modules, bundles, state).
+  endpoints: [GET /subscriptions, PUT /subscriptions, POST /subscriptions/bundleInfo, PUT /subscriptions/start, PUT /subscriptions/stop]
+- name: PortalUser
+  description: An admin/portal user attached to a workspace.
+  endpoints: [POST /v1/portal-users]
+- name: ProtectedUser
+  description: An end user under Coro protection within a workspace.
+- name: ProtectedDevice
+  description: A device under Coro protection; can be licensed/unlicensed.
+  key_fields: [enrollmentCode, deviceProtectionStatus]
+  endpoints: ['POST /v1/devices/{enrollmentCode}/license', 'DELETE /v1/devices/{enrollmentCode}/license']
+- name: Ticket
+  description: A security ticket/violation with actionable remediation.
+  key_fields: [id, ticketDetails, violatedDataTypes]
+  endpoints: ['GET /tickets', 'POST /tickets/{id}/actions']
+- name: AuditLog
+  description: Workspace audit log entries.
+  endpoints: [GET /v1/audit-logs/search]
+- name: Usage
+  description: Workspace usage/demo-mode data.
+  endpoints: [GET /usage]
+relationships:
+- from: Workspace
+  to: Workspace
+  type: has_many
+  via: parentWorkspaceId
+  note: A channel (MSP parent) workspace has many child workspaces.
+- from: Workspace
+  to: Subscription
+  type: has_one
+  via: workspaceId
+- from: Workspace
+  to: PortalUser
+  type: has_many
+  via: workspaceId
+- from: Workspace
+  to: ProtectedUser
+  type: has_many
+  via: workspaceId
+- from: Workspace
+  to: ProtectedDevice
+  type: has_many
+  via: workspaceId
+- from: Workspace
+  to: Ticket
+  type: has_many
+  via: workspaceId
+- from: Workspace
+  to: AuditLog
+  type: has_many
+  via: workspaceId
+- from: ProtectedDevice
+  to: Workspace
+  type: belongs_to
+  via: workspaceId

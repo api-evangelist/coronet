@@ -1,0 +1,45 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.coro.net/developer-portal/
+docs: https://docs.coro.net/developer-portal/
+authentication:
+  style: oauth2-client-credentials
+  token: bearer (24h)
+  headers: [Authentication, Workspace]
+  ref: authentication/coronet-authentication.yml
+tenancy:
+  model: workspace
+  description: >-
+    The platform is organized around workspaces (tenants). Every API request
+    carries a Workspace header identifying the target workspace. Workspace
+    types: regular (individual companies), channel (MSP parent level), and
+    child (MSP customers).
+  header: Workspace
+versioning:
+  scheme: uri-path
+  current_path: /v1
+  api_version: 3.8.3
+  ref: lifecycle/coronet-lifecycle.yml
+pagination:
+  style: page
+  observed_response_fields: [items, totalElements]
+  example_schema: WorkspacePageResponse
+  notes: >-
+    Search endpoints (e.g. GET /v1/workspaces/search) return paginated
+    responses such as WorkspacePageResponse with items[] and totalElements.
+idempotency:
+  supported: false
+  notes: No idempotency-key mechanism is documented in the Coro Public API.
+error_envelope:
+  notes: >-
+    A dedicated error-response reference was not retrievable from the public
+    docs (the API host requires authentication). Not captured to avoid
+    fabrication.
+webhooks:
+  supported: true
+  transport: HTTP POST (JSON)
+  security: HMAC SHA-256 signature (X-Coro-Signature) over X-Coro-Hook-Id
+  headers: [X-Coro-Hook-Id, X-Coro-Hook-Type, X-Coro-Signature]
+  ref: asyncapi/coronet-webhooks-asyncapi.yml
+rate_limiting:
+  notes: No rate-limit signaling is documented in the public API docs.

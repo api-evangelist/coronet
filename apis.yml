@@ -1,8 +1,18 @@
 aid: coronet
 name: CoroNet
-description: 'CoroNet is a company surfaced as a portfolio company of kleiner-perkins and added to the
-  API Evangelist network as a stub for enrichment. Sector: enterprise. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Coro (CoroNet) is a cybersecurity company delivering a unified, AI-native
+  security platform for lean IT teams, growing organizations, and managed
+  service providers (MSPs). A single platform and dashboard consolidate endpoint
+  protection, email protection, network protection (ZTNA/VPN), cloud app
+  security, data governance, and security awareness training. The Coro Public
+  API lets service providers and developers build applications that integrate
+  with the platform: it is organized around workspaces (regular, channel, and
+  child tenants) and exposes endpoints for managing workspaces, subscriptions,
+  portal users, protected users and devices, device licensing, tickets, audit
+  logs, and usage. Authentication uses OAuth2 client-credential pairs exchanged
+  for a 24-hour bearer token, and Coro publishes a webhook surface with
+  HMAC-signed events for billing and workspace automation.
 url: https://raw.githubusercontent.com/api-evangelist/coronet/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,15 +20,131 @@ x-backed-by:
 - kleiner-perkins
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
+image: https://www.coro.net/wp-content/uploads/coro-opengraph.png
 tags:
 - Company
 - Enterprise
-apis: []
+- Cybersecurity
+- Security
+- Endpoint Security
+- Email Security
+- Network Security
+- Cloud Security
+- Managed Service Providers
+- Compliance
+- Webhooks
+- API
+apis:
+- name: Coro Public API
+  description: >-
+    The Coro Public API enables service providers and developers to build
+    applications that integrate with the Coro Cybersecurity platform. Organized
+    around workspaces (regular, channel, child), it covers workspace lifecycle,
+    subscriptions, portal users, protected users and devices, device licensing,
+    tickets, audit logs, and usage, with an HMAC-signed webhook event surface.
+  humanURL: https://docs.coro.net/developer-portal/
+  baseURL: https://api.secure.coro.net
+  tags:
+  - Cybersecurity
+  - Workspaces
+  - MSP
+  - Webhooks
+  properties:
+  - type: Documentation
+    url: https://docs.coro.net/developer-portal/
+  - type: Authentication
+    url: https://docs.coro.net/developer-portal/authentication
+  - type: Authentication
+    url: authentication/coronet-authentication.yml
+  - type: Conventions
+    url: conventions/coronet-conventions.yml
+  - type: Webhooks
+    url: https://docs.coro.net/developer-portal/what-is-webhook
+  - type: Webhooks
+    url: asyncapi/coronet-webhooks-asyncapi.yml
+  - type: AsyncAPI
+    url: asyncapi/coronet-webhooks-asyncapi.yml
+  - type: ChangeLog
+    url: changelog/coronet-changelog.yml
+  - type: Lifecycle
+    url: lifecycle/coronet-lifecycle.yml
+  - type: Conformance
+    url: conformance/coronet-conformance.yml
+  - type: DataModel
+    url: data-model/coronet-data-model.yml
+  - type: MCPServer
+    url: mcp/coronet-mcp.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: DomainSecurity
+  url: security/coronet-domain-security.yml
+- type: Website
+  url: https://www.coro.net
+- type: DeveloperPortal
+  url: https://docs.coro.net/developer-portal/
+- type: Documentation
+  url: https://docs.coro.net/
+- type: APIReference
+  url: https://docs.coro.net/developer-portal/
+- type: GettingStarted
+  url: https://docs.coro.net/developer-portal/what-is-api
+- type: ChangeLog
+  url: https://docs.coro.net/developer-portal/changelog
+- type: ChangeLog
+  url: changelog/coronet-changelog.yml
+- type: StatusPage
+  url: https://coro.statuspage.io
+- type: Blog
+  url: https://www.coro.net/blog
+- type: Pricing
+  url: https://www.coro.net/pricing
+- type: SignUp
+  url: https://secure.coro.net
+- type: Support
+  url: https://www.coro.net/contact
+- type: TermsOfService
+  url: https://www.coro.net/terms
+- type: PrivacyPolicy
+  url: https://www.coro.net/privacy
+- type: LLMsTxt
+  url: llms/coronet-llms.txt
+- type: Authentication
+  url: authentication/coronet-authentication.yml
+- type: Conventions
+  url: conventions/coronet-conventions.yml
+- type: Webhooks
+  url: asyncapi/coronet-webhooks-asyncapi.yml
+- type: AsyncAPI
+  url: asyncapi/coronet-webhooks-asyncapi.yml
+- type: Lifecycle
+  url: lifecycle/coronet-lifecycle.yml
+- type: Conformance
+  url: conformance/coronet-conformance.yml
+- type: DataModel
+  url: data-model/coronet-data-model.yml
+- type: MCPServer
+  url: mcp/coronet-mcp.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

@@ -1,0 +1,25 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.coro.net/developer-portal/changelog
+versioning:
+  scheme: uri-path
+  current_path: /v1
+  product_version: 3.8.3
+  docs: https://docs.coro.net/developer-portal/changelog
+regions:
+- name: United States
+  host: api.secure.coro.net
+- name: Canada
+  host: api.secure-ca.coro.net
+- name: Germany (EU)
+  host: api.secure-eu.coro.net
+status_page: https://coro.statuspage.io
+changelog: https://docs.coro.net/developer-portal/changelog
+deprecation:
+  policy_url: null
+  sunset_header: null
+  notes: >-
+    No formal deprecation/sunset policy (RFC 8594) is documented in the public
+    developer portal. The changelog records additive and modified endpoints but
+    no deprecations were observed.
+deprecated_operations: []

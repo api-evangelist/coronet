@@ -1,0 +1,47 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.coro.net/developer-portal/changelog
+scheme: semver-ish product-version
+current_version: 3.8.3
+entries:
+- version: 3.8.3
+  date: '2026-04'
+  additions:
+  - 'New endpoint POST /v1/devices/{enrollmentCode}/license — add a license to a device.'
+  - 'New endpoint DELETE /v1/devices/{enrollmentCode}/license — remove a license (sets device UNLICENSED).'
+  - 'New schemas: AddLicenseResponse, WorkspacePageResponse.'
+  changes:
+  - 'GET /v1/workspaces/search now returns paginated WorkspacePageResponse.'
+  - 'POST /v1/workspaces CreateWorkspaceRequest gained overCapacityAllowance, maxDevicesLimit, invitedByAdminName, invitedByAdminEmail; maxProtectedUsers minimum constraint removed.'
+  - 'POST /v1/portal-users AddPortalUserRequest gained invitedByAdminName, invitedByAdminEmail.'
+  - 'GET /v1/audit-logs/search subTypes gained userProtected, userUnprotected, autoProtectUsers, unlicenseDevice, licenseDevice enum values.'
+  - 'WorkspaceResponse gained overCapacityAllowance, maxDevicesLimit, limited; workspaceCreationType gained distributorPortal.'
+  breaking: false
+- version: '3.7'
+  date: '2025-11'
+  additions:
+  - 'New Secure Web Gateway (SWG) module added to the modules parameter on the /subscriptions endpoint responses.'
+  breaking: false
+- version: 3.6.1
+  date: '2025-09'
+  breaking: false
+- version: '3.5'
+  date: '2025-04'
+  breaking: false
+- version: 3.4.2.1
+  date: '2025-04'
+  breaking: false
+- version: '3.4'
+  date: '2025-01'
+  additions:
+  - 'New GET /audit-logs/search endpoint to obtain a workspace audit log.'
+  - 'New Security Awareness Training (SAT) module in the modules property of /subscriptions and /subscriptions/bundleInfo.'
+  - 'demoModeEnabled and demoModeEndDate added to GET /usage response.'
+  - 'workspaceCreationType returned in GET and POST /workspaces responses.'
+  - '/workspaces/search endpoint to search child workspaces of a channel workspace.'
+  - 'PUT /subscriptions/start and PUT /subscriptions/stop to start/stop a subscription.'
+  - 'metadata parameter on POST /tickets/{id}/actions (addToDataGovernancePermissions).'
+  breaking: false
+- version: '3.3'
+  date: '2024-11'
+  breaking: false

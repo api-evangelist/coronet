@@ -1,0 +1,29 @@
+generated: '2026-07-18'
+method: derived
+source: https://docs.coro.net/developer-portal/
+standards:
+- id: oauth2
+  conforms: true
+  evidence: >-
+    Auth uses OAuth2 client-credential pairs exchanged at /oath/token for a
+    24-hour bearer token (docs authentication page).
+- id: oauth2-client-credentials
+  conforms: true
+  evidence: Client ID + Secret credential pair, machine-to-machine flow.
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: No /.well-known/security.txt served on www/docs/api hosts (404).
+- id: webhooks-hmac-signing
+  conforms: true
+  evidence: >-
+    Webhook payloads carry an HMAC SHA-256 X-Coro-Signature over X-Coro-Hook-Id
+    signed with a shared secret (docs webhook page).
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Error envelope not documented publicly; not asserted.
+compliance_note: >-
+  The Coro compliance page frames SOC 2, ISO 27001, PCI DSS and numerous data
+  privacy regulations (GDPR, HIPAA, CCPA, etc.) as frameworks the Coro platform
+  helps CUSTOMERS comply with; it does not verify Coro's own certifications, and
+  the security page states no own-certification list. No `Compliance` pointer is
+  emitted to avoid asserting unverified certifications.

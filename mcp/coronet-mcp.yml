@@ -1,0 +1,57 @@
+generated: '2026-07-18'
+method: derived
+status: candidate
+source: https://docs.coro.net/developer-portal/
+note: >-
+  No official Coro-hosted MCP server was found. This is a CANDIDATE tool list
+  derived from the endpoints documented in Coro's public developer portal
+  (changelog + guides). Not a published server.
+server:
+  name: coronet
+  transport: http
+tools:
+- name: list_workspaces
+  description: List workspaces.
+  source_operation: GET /v1/workspaces
+- name: create_workspace
+  description: Create a workspace.
+  source_operation: POST /v1/workspaces
+- name: search_workspaces
+  description: Search child workspaces of a channel workspace (paginated).
+  source_operation: GET /v1/workspaces/search
+- name: add_portal_user
+  description: Add a portal (admin) user to a workspace.
+  source_operation: POST /v1/portal-users
+- name: license_device
+  description: Add a license to a device by enrollment code.
+  source_operation: POST /v1/devices/{enrollmentCode}/license
+- name: unlicense_device
+  description: Remove a license from a device (sets it UNLICENSED).
+  source_operation: DELETE /v1/devices/{enrollmentCode}/license
+- name: get_subscription
+  description: Get a workspace subscription.
+  source_operation: GET /subscriptions
+- name: update_subscription
+  description: Update a workspace subscription.
+  source_operation: PUT /subscriptions
+- name: start_subscription
+  description: Start a subscription.
+  source_operation: PUT /subscriptions/start
+- name: stop_subscription
+  description: Stop a subscription.
+  source_operation: PUT /subscriptions/stop
+- name: get_subscription_bundle_info
+  description: Retrieve subscription bundle information.
+  source_operation: POST /subscriptions/bundleInfo
+- name: list_tickets
+  description: List security tickets.
+  source_operation: GET /tickets
+- name: action_ticket
+  description: Perform an action on a ticket.
+  source_operation: POST /tickets/{id}/actions
+- name: search_audit_logs
+  description: Search a workspace's audit log.
+  source_operation: GET /v1/audit-logs/search
+- name: get_usage
+  description: Get workspace usage data.
+  source_operation: GET /usage
