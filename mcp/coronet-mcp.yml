@@ -2,10 +2,8 @@ generated: '2026-07-18'
 method: derived
 status: candidate
 source: https://docs.coro.net/developer-portal/
-note: >-
-  No official Coro-hosted MCP server was found. This is a CANDIDATE tool list
-  derived from the endpoints documented in Coro's public developer portal
-  (changelog + guides). Not a published server.
+note: No official Coro-hosted MCP server was found. This is a CANDIDATE tool list derived from the endpoints
+  documented in Coro's public developer portal (changelog + guides). Not a published server.
 server:
   name: coronet
   transport: http
@@ -55,3 +53,9 @@ tools:
 - name: get_usage
   description: Get workspace usage data.
   source_operation: GET /usage
+deployment:
+  mode: none
+  verified: derived
+  tools: 15
+  checked: '2026-08-12'
+  source: catalog MCP census
