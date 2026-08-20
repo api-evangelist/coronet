@@ -47,6 +47,18 @@ tags:
 - Cloud Security
 - Managed Service Providers
 - Compliance
+- Webhook
+tags_raw:
+- Company
+- Enterprise
+- Cybersecurity
+- Security
+- Endpoint Security
+- Email Security
+- Network Security
+- Cloud Security
+- Managed Service Providers
+- Compliance
 - Webhooks
 - API
 apis:
@@ -60,6 +72,11 @@ apis:
   humanURL: https://docs.coro.net/developer-portal/
   baseURL: https://api.secure.coro.net
   tags:
+  - Cybersecurity
+  - Workspaces
+  - MSP
+  - Webhook
+  tags_raw:
   - Cybersecurity
   - Workspaces
   - MSP
