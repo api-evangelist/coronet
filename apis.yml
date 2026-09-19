@@ -84,7 +84,7 @@ apis:
   baseURL: https://api.secure.coro.net
   tags:
   - Cybersecurity
-  - Workspaces
+  - Workspace
   - MSP
   - Webhook
   tags_raw:
