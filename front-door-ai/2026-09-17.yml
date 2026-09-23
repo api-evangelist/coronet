@@ -1,0 +1,29 @@
+# Front Door AI Index — coronet — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: coronet
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.coro.net
+  final_host: www.coro.net
+  ownership: shared
+  owner: coro
+  shares_host_with:
+  - coro
+  inherited_from: null
+  verdict: scored
+  score: null
+  host_score: 6
+  density: null
+  words: 1542
+  tiers:
+    agentic: 2
+    core: 4
+    model: 0
+  ambiguous: 7
+  top_terms:
+    agent: 6
+    AI: 4
+    AI agent: 2
+    intelligence: 1
