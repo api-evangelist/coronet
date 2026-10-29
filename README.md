@@ -64,6 +64,115 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-CoroNet is a company surfaced as a portfolio company of kleiner-perkins and added to the API Evangelist network as a stub for enrichment. Sector: enterprise. This profile is a lead awaiting the enrichment pipeline.
+Coro (CoroNet) is a cybersecurity company delivering a unified, AI-native security platform for lean IT teams, growing organizations, and managed service providers (MSPs). A single platform and dashboard consolidate endpoint protection, email protection, network protection (ZTNA/VPN), cloud app security, data governance, and security awareness training. The Coro Public API lets service providers and developers build applications that integrate with the platform: it is organized around workspaces (regular, channel, and child tenants) and exposes endpoints for managing workspaces, subscriptions, portal users, protected users and devices, device licensing, tickets, audit logs, and usage. Authentication uses OAuth2 client-credential pairs exchanged for a 24-hour bearer token, and Coro publishes a webhook surface with HMAC-signed events for billing and workspace automation.
 
-Backed by: kleiner-perkins
+**Areas:** Company · Enterprise · Cybersecurity · Security · Endpoint Security · Email Security · Network Security · Cloud Security · Managed Service Providers · Compliance · Webhook
+
+## CoroNet on APIs.io
+
+Everything profiled for CoroNet is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/coronet/](https://apis.io/providers/coronet/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Coro Public API](https://apis.io/apis/coronet/coro-public-api/) — The Coro Public API enables service providers and developers to build applications that integrate with the Coro Cybersecurity platform. Organized around…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Coro Public API Webhooks](https://apis.io/asyncapis/coronet/coronet-webhooks-asyncapi/)
+
+#### Event channels (1)
+
+Individual events and webhooks the provider emits.
+
+- [/](https://apis.io/channels/coronet/corowebhook/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [coronet](https://apis.io/servers/coronet/coronet/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Coronet Authentication](https://apis.io/security/coronet/coronet-authentication/)
+- [Coronet Domain Security](https://apis.io/security/coronet/coronet-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.coro.net)
+- [Documentation](https://docs.coro.net/)
+- [Getting started](https://docs.coro.net/developer-portal/what-is-api)
+- [API reference](https://docs.coro.net/developer-portal/)
+- [Pricing](https://www.coro.net/pricing)
+- [Sign up](https://secure.coro.net)
+- [Support](https://www.coro.net/contact)
+- [Changelog](https://docs.coro.net/developer-portal/changelog)
+- [Blog](https://www.coro.net/blog)
+- [Terms of service](https://www.coro.net/terms)
+- [Privacy policy](https://www.coro.net/privacy)
+- [Status](https://coro.statuspage.io)
+
+## API Evangelist rating
+
+**Kin Score 42.0** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 39.6 |
+| Contract governance | 4.5 |
+| Operational transparency | 39.5 |
+| Developer ergonomics | 57.1 |
+| Access clarity | 31.6 |
+
+**Agent readiness 16.5** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | derived (partial credit) |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/coronet/](https://apis.io/providers/coronet/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for CoroNet: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/coronet/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
